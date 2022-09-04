@@ -1,4 +1,5 @@
 # 90-Days-Coding-Journey
+## https://leadcoding.in/dsa-courses/
 
 ## 1 - RECURSION: a function that call itself again and again. Stack recursion(1 function call another function in stack manner. Internal stack is there that's why space complexity)
 ### Space complexity:  height of tree
@@ -52,5 +53,23 @@ public:
         if(n==1 || n==2) return 1;
         
         return fib(n-1)+fib(n-2);
+    }
+};
+    
+##### Ques4.Power(X,N)
+class Solution {
+public:
+    double myPow(double x, int n) {
+        if (n==0) return 1;
+        if (n < 0)
+    {
+      x = 1 / x;
+      n = abs(n);
+    }
+        double temp = myPow(x,n/2);
+        if(n%2==1) return temp*temp*x;
+        
+        return temp*temp;
+        
     }
 };
