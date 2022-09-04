@@ -67,7 +67,8 @@ public:
       n = abs(n);
     }
         double temp = myPow(x,n/2);
-        if(n%2==1) return temp*temp*x;
+        if(n%2==1) 
+            return temp*temp*x;
         
         return temp*temp;
         
