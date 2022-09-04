@@ -1,7 +1,9 @@
 # 90-Days-Coding-Journey
 
-## 1 - RECURSION: a function that call itself again and again.
-##### Ques. Factorial of a number.
+## 1 - RECURSION: a function that call itself again and again. Stack recursion(1 function call another function in stack manner. Internal stack is there that's why space complexity)
+### Space complexity:  height of tree
+### time complexity: nodes 
+##### Ques1. Factorial of a number.
 #include <iostream>
 using namespace std;
 
@@ -25,3 +27,30 @@ int main() {
 
     return 0;
 }
+
+##### Ques2. Sum of n natural number.
+#include <iostream>
+using namespace std;
+ int sum(int x){
+     while(x!=0){
+         return x+sum(x-1);
+     }
+ }
+
+int main() {
+   int n;
+   cin>>n;
+   cout<<sum(n);
+    return 0;
+}
+
+##### Ques3.Fibonacci Number (time O(2^n) (space O(n))
+class Solution {
+public:
+    int fib(int n) {
+        if(n==0) return 0;
+        if(n==1 || n==2) return 1;
+        
+        return fib(n-1)+fib(n-2);
+    }
+};
